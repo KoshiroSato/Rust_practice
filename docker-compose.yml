@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+  rust_practice:
+    build: 'Docker/'
+    volumes: 
+      - '.:/temp/rust_practice'
+    ports:
+      - 8000:8000
+    working_dir: '/temp/rust_practice'
+    command: 'tail -f /dev/null'
